@@ -63,8 +63,6 @@ function App() {
 
   return (
     <div>
-      <h3>画像生成</h3>
-      <h4>生成</h4>
       <button onClick={() => {
         render()
       }}>press</button>
