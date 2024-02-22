@@ -32,8 +32,9 @@ function App() {
     });
 
     let listWidth = 1
+    console.log(list.length)
     for (let i = 1; i < 10; i++) {
-      if (i * i < list.length) listWidth = i;
+      if (i * i <= list.length) listWidth = i;
     }
 
     const canvasElem = document.createElement('canvas')
@@ -50,7 +51,6 @@ function App() {
       }
       resolve(listData)
     }).then((value) => {
-      console.log(value[0])
       ctx.clearRect(0, 0, width, height)
       for (let i = 0; i < listWidth; i++) {
         for (let j = 0; j < listWidth; j++) {
